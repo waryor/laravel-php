@@ -26,7 +26,7 @@ RUN printf "listen.group=www-data\n" >> /etc/php8/php-fpm.conf
 RUN printf "listen.mode=0660" >> /etc/php8/php-fpm.conf
 
 # configure nginx
-COPY --from=build ./nginx/default.conf /etc/nginx/http.d/default.conf
+COPY ./nginx/default.conf /etc/nginx/http.d/default.conf
 
 WORKDIR /app
 
